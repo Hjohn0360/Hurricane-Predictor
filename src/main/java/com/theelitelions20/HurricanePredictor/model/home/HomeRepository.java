@@ -1,7 +1,7 @@
 package com.theelitelions20.HurricanePredictor.model.home;
+import org.springframework.data.repository.CrudRepository;
 
+import javax.sql.rowset.CachedRowSet;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-
-public interface HomeRepository extends JpaRepository<Home, Integer> {
+public interface HomeRepository extends CrudRepository<Home, Integer> {
 }
