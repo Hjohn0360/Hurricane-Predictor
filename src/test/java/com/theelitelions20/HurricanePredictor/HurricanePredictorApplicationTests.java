@@ -2,6 +2,8 @@ package com.theelitelions20.HurricanePredictor;
 
 import com.theelitelions20.HurricanePredictor.model.home.Home;
 import com.theelitelions20.HurricanePredictor.model.home.HomeDao;
+import com.theelitelions20.HurricanePredictor.model.safety.Safety;
+import com.theelitelions20.HurricanePredictor.model.safety.SafetyDao;
 import com.theelitelions20.HurricanePredictor.model.user.User;
 import com.theelitelions20.HurricanePredictor.model.user.UserDao;
 import org.junit.jupiter.api.Test;
@@ -13,7 +15,8 @@ class HurricanePredictorApplicationTests {
 
 	@Autowired
 	//private UserDao userDao;
-	private HomeDao homeDao;
+	//private HomeDao homeDao;
+	private SafetyDao safetyDao;
 /*
 	//@Test
 	void addUserTest() {
@@ -28,7 +31,7 @@ class HurricanePredictorApplicationTests {
 
  */
 
-	@Test
+	/*@Test
 	void addHomeTest(){
 		Home home = new Home();
 		home.setHurricaneName("Milton");
@@ -37,4 +40,14 @@ class HurricanePredictorApplicationTests {
 		homeDao.save(home);
 	}
 
+
+	 */
+	@Test
+	void addSafetyTest(){
+		Safety safety = new Safety();
+		safety.setFirstaidkit(true);
+		safety.setMedications(false);
+		safety.setCash(true);
+		safetyDao.save(safety);
+	}
 }
