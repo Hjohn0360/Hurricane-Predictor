@@ -23,6 +23,13 @@ public class SafetyDao {
                 .forEach(safeties:: add);
         return safeties;
     }
+    public boolean deleteSafetyById(int id){
+        if(repository.existsById(id)){
+            repository.deleteById(id);
+            return true;
+        }
+        return false;
+    }
 
     public Safety updateSafety(int id, Safety updatedSafety){
         return repository.findById(id)

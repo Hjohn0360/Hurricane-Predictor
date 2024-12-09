@@ -1,5 +1,7 @@
 package com.theelitelions20.HurricanePredictor;
 
+import com.theelitelions20.HurricanePredictor.model.evacuation.Evacuation;
+import com.theelitelions20.HurricanePredictor.model.evacuation.EvacuationDao;
 import com.theelitelions20.HurricanePredictor.model.home.Home;
 import com.theelitelions20.HurricanePredictor.model.home.HomeDao;
 import com.theelitelions20.HurricanePredictor.model.safety.Safety;
@@ -16,7 +18,8 @@ class HurricanePredictorApplicationTests {
 	@Autowired
 	//private UserDao userDao;
 	//private HomeDao homeDao;
-	private SafetyDao safetyDao;
+	//private SafetyDao safetyDao;
+	private EvacuationDao evacuationDao;
 /*
 	//@Test
 	void addUserTest() {
@@ -43,11 +46,12 @@ class HurricanePredictorApplicationTests {
 
 	 */
 	@Test
-	void addSafetyTest(){
-		Safety safety = new Safety();
-		safety.setFirstaidkit(true);
-		safety.setMedications(false);
-		safety.setCash(true);
-		safetyDao.save(safety);
+	void addEvacuationTest(){
+		Evacuation evacuation = new Evacuation();
+		evacuation.setShelterAddress("Larry");
+		evacuation.setShelter("BRADON TRAIN");
+		evacuationDao.save(evacuation);
 	}
+
+
 }
